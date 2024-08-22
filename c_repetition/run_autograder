@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Set up autograder files
+
+SUBMISSION_DIR=/autograder/submission
+
+cp $SUBMISSION_DIR/CRepetition.c /autograder/source/CRepetition.c
+
+cd /autograder/source
+
+make
+
+python3 run_tests.py > /autograder/results/results.json
